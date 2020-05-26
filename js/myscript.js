@@ -19,3 +19,4 @@ do {
 
 alert('il tuo cognome e ' + cognomeUtente)
 alert('il tuo cognome e il numero ' + (cognomi.indexOf(cognomeUtente) + 1) + " su " + cognomi.length);
+console.log(cognomi);
