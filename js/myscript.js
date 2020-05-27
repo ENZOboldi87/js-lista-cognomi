@@ -17,6 +17,9 @@ do {
   cognomi.sort();
 }
 
+for (var i = 0; i < cognomi.length; i++) {
+  listaCognomi.innerHTML += "<li>" + cognomi[i] + "</li>";
+}
 alert('il tuo cognome e ' + cognomeUtente)
 alert('il tuo cognome e il numero ' + (cognomi.indexOf(cognomeUtente) + 1) + " su " + cognomi.length);
 console.log(cognomi);
