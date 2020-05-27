@@ -8,7 +8,7 @@ var cognomi = [ "Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
 
 do {
 
-  if (isNaN(cognomeUtente)) {
+  if (!isNaN(cognomeUtente)) {
       alert("non hai inserito un cognome");
     }
 
