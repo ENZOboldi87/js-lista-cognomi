@@ -1,18 +1,18 @@
+// variabile
 var listaCognomi = document.getElementById('lista-cognomi');
 
-
+var cognomeUtente = prompt ("inserisci il tuo cognome");
 // lista cognomi
 var cognomi = [ "Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
 
 
 do {
-  cognomeUtente = prompt ("inserisci il tuo cognome");
-  if (!isNaN(cognomeUtente)) {
+
+  if (isNaN(cognomeUtente)) {
       alert("non hai inserito un cognome");
     }
 
-
-} while ((0 > cognomeUtente.length) || (!isNaN(cognomeUtente)))  {
+} while (0 > cognomeUtente.length)  {
   cognomi.push(cognomeUtente);
   cognomi.sort();
 }
