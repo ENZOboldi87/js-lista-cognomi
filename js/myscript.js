@@ -1,21 +1,25 @@
 // variabile
 var listaCognomi = document.getElementById('lista-cognomi');
+var cognomeUtente = '';
+var tentativo = 0;
+var messaggio = 'Inserisci il tuo cognome';
 
-var cognomeUtente = prompt ("inserisci il tuo cognome");
+
 // lista cognomi
 var cognomi = [ "Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
 
 
 do {
 
-  if (!isNaN(cognomeUtente)) {
-      alert("non hai inserito un cognome");
+  if (++tentativo > 1) {
+    messaggio = 'Non hai inserito un cognome valido';
     }
+cognomeUtente = prompt(messaggio);
 
-} while (0 > cognomeUtente.length)  {
+} while ((cognomeUtente.length == 0) || (!isNaN(cognomeUtente)));
   cognomi.push(cognomeUtente);
   cognomi.sort();
-}
+
 
 for (var i = 0; i < cognomi.length; i++) {
   listaCognomi.innerHTML += "<li>" + cognomi[i] + "</li>";
